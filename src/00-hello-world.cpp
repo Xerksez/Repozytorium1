@@ -5,10 +5,10 @@
 
 #include <iostream>
 
-
+using namespace std;
 auto main() -> int
 {
-    std::cout << "Hello, World\n";
+    cout << "Hello, Hubert";
 
     return 0;
 }
