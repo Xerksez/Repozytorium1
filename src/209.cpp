@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <string>
 auto pytanie(std::string tekst) -> int
@@ -8,14 +7,17 @@ auto pytanie(std::string tekst) -> int
     std::cin >> n;
     return n;
 }
+
 auto main() -> int
 {
-    int a, b;
-    a = pytanie("Podaj pierwszą liczbę");
-    b = pytanie("Podaj drugą liczbę");
-    while (a != b) {
-        std::cout << a << "\n";
-        a++;
+    int a;
+    int b = 1;
+    int i = 1;
+    a     = pytanie("Podaj liczbę");
+    while (i <= a) {
+        b = b * i;
+        i++;
     }
+    std::cout << "silnia tej liczby to: " << b;
     return 0;
 }
