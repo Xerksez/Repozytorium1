@@ -13,15 +13,13 @@ auto main() -> int
 {
     int a;
     int i = 1;
-    int k = 1;
     a     = pytanie("podaj wysokość");
     while (i <= a) {
-        for (int j = 1; j <= k; j++) {
+        for (int j = 1; j <= i; j++) {
             std::cout << "*";
         }
         std::cout << "\n";
         i++;
-        k++;
     }
     return 0;
 }

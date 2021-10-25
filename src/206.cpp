@@ -22,21 +22,18 @@ auto sprawdzanie(int a, int b) -> int
     return 0;
 }
 
-auto main() -> int
+auto main(int argc, char* argv[]) -> int
 {
-    int a, b, c, d, e, f;
-    a = pytanie("Podaj liczbe porownywaną");
-    b = pytanie("Podaj 1 liczbę");
-    c = pytanie("Podaj 2 liczbę");
-    d = pytanie("Podaj 3 liczbę");
-    e = pytanie("Podaj 4 liczbę");
-    f = pytanie("Podaj 5 liczbę");
-
-    sprawdzanie(a, b);
-    sprawdzanie(a, c);
-    sprawdzanie(a, d);
-    sprawdzanie(a, e);
-    sprawdzanie(a, f);
+    if(argc==0)
+{
+return 1;
+}
+int i=2;
+while (i<argc)
+{
+    sprawdzanie(std::stoi(argv[1]),std::stoi( argv[i]));
+i++;
+}
 
     return 0;
 }
