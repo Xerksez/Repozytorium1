@@ -24,16 +24,14 @@ auto sprawdzanie(int a, int b) -> int
 
 auto main(int argc, char* argv[]) -> int
 {
-    if(argc==0)
-{
-return 1;
-}
-int i=2;
-while (i<argc)
-{
-    sprawdzanie(std::stoi(argv[1]),std::stoi( argv[i]));
-i++;
-}
+    if (argc == 0) {
+        return 1;
+    }
+    int i = 2;
+    while (i < argc) {
+        sprawdzanie(std::stoi(argv[1]), std::stoi(argv[i]));
+        i++;
+    }
 
     return 0;
 }

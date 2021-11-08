@@ -14,21 +14,18 @@ auto main() -> int
     int a;
     int i = 1;
     a     = pytanie("podaj wymiar kwadratu");
-	while(i<=a)
-	{
-	if(i==1||i==a)
-	{
-	for(int j=1;j<=a;j++)
-	std::cout<<"*";
-	}else
-	{
-	std::cout<<"*";
-	for(int c=1;c<=a-2;c++)
-	std::cout<<" ";
-	std::cout<<"*";
-	}
-std::cout<<"\n";
-i++;
-	}
+    while (i <= a) {
+        if (i == 1 || i == a) {
+            for (int j = 1; j <= a; j++)
+                std::cout << "*";
+        } else {
+            std::cout << "*";
+            for (int c = 1; c <= a - 2; c++)
+                std::cout << " ";
+            std::cout << "*";
+        }
+        std::cout << "\n";
+        i++;
+    }
     return 0;
 }
