@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <math.h>
 auto pytanie(std::string tekst) -> int
 {
     int n;
@@ -14,9 +15,8 @@ bool x= true;
 if(a==0 or a==1)
 {
 return 0;
-}else
-{
-for(int i=2;i<(a/2);i++)
+}else{
+for(int i=2;i<=(sqrt(a));i++)
 {
 l++;
 if(a%i==0)
@@ -34,7 +34,6 @@ else
 std::cout<<"Liczba "<<a<<" nie jest liczbą pierwszą";
 std::cout<<"wykonało "<<l<<" pętli";
 return 0;
-
 }
 }
 }
