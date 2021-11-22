@@ -15,7 +15,7 @@ auto main() -> int
     a     = pytanie("podaj wysokość trójkąta");
     while (i <= a) {
         if (i == 1 || i == a) {
-            for (int j = 1; j <= a+3; j++)
+            for (int j = 1; j <= a + 3; j++)
                 std::cout << "*";
         } else {
             std::cout << " ";
@@ -28,5 +28,3 @@ auto main() -> int
     }
     return 0;
 }
-
-
