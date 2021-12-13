@@ -1,31 +1,23 @@
 #include <iostream>
-#include <string>
-
-auto pytanie(std::string tekst) -> int
+auto sortuj(int t[], int n) -> void
 {
-    int n;
-    std::cout << tekst << "\n";
-    std::cin >> n;
-    return n;
-}
-auto search(int a[], int n, int szukana) -> int
-{
-    for(int i=0;i<n;i++){
-        if(szukana == a[i]){
-            std::cout << "ta liczba jest "<<i+1<<" w tabeli";
-            return i;
-        }
-        }
-        std::cout << "Nie ma takiej liczby";
-        return -1;
+    for(int i=0; i<n; i++)
+    {
+        for(int j=1; j<n-i; j++)
+            if(t[j-1]>t[j])
+            {
+                int tym = t[j];
+                t[j] = t[j-1];
+                t[j-1] = tym;
+            }
     }
+    for(int i=0; i<n; i++)
+        std::cout<<t[i]<<"\n";
+}
+
 auto main() -> int
 {
-	int tab[10] { 42 , 9 , -1 , 18 ,3 , 59 , 101 , 31 , 72 , 12 };
-
-    auto const c = pytanie ("Jakiej liczby szukasz?");
-    int s = search(tab,10,c);
-
-
-return 0;
+    int tablica[] = { 42, 9, -1, 18, 59, 3, 101, 31, 72, 12 };
+    sortuj(tablica,10);
+    return 0;
 }
