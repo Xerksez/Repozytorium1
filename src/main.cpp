@@ -4,7 +4,7 @@ auto sortuj(int t[], int n) -> void
     for(int i=0; i<n; i++)
     {
         for(int j=1; j<n-i; j++)
-            if(t[j-1]>t[j])
+            if(t[j-1]<t[j])
             {
                 int tym = t[j];
                 t[j] = t[j-1];
