@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1639691079 source:c:\users\xerks\onedrive\pulpit\c++\projekt\main.cpp
+	<iostream>
+	<time.h>
+	<windows.h>
+	<cstdlib>
+	<conio.h>
+
